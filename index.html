@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloomsy 🌿 — Bringing Nature Closer to You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#" onclick="switchTab('about'); return false;">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">Bloomsy</span>
+      </a>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="tab-nav" id="tabNav">
+        <button class="tab-btn active" data-tab="about">About Us</button>
+        <button class="tab-btn" data-tab="services">Services</button>
+        <button class="tab-btn" data-tab="products">Products</button>
+        <button class="tab-btn" data-tab="impact">Impact</button>
+        <button class="tab-btn" data-tab="community">Community &amp; Blog</button>
+        <button class="tab-btn" data-tab="feedback">Feedback</button>
+        <button class="tab-btn" data-tab="contact">Contact Us</button>
+      </nav>
+      <!-- Cart Icon Button -->
+      <button class="cart-icon-btn" id="cartIconBtn" aria-label="Open cart">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== PAGE WRAPPER ===== -->
+  <main class="page-wrapper">
+
+    <!-- ===================== ABOUT US TAB ===================== -->
+    <section class="tab-panel active" id="tab-about">
+      <div class="hero-about">
+        <div class="hero-deco">
+          <span class="deco-leaf d1">🌿</span>
+          <span class="deco-leaf d2">🍃</span>
+          <span class="deco-leaf d3">🌱</span>
+          <span class="deco-leaf d4">🍀</span>
+        </div>
+        <div class="hero-about-content">
+          <span class="eyebrow">Welcome to Bloomsy</span>
+          <h1>Bringing Nature<br/><em>Closer to You</em> 🌱</h1>
+          <p class="hero-lead">Bloomsy believes that every home deserves a touch of nature. Our goal is to make plants easy to grow and accessible for everyone by providing the right plants, tools, and guidance.</p>
+          <div class="hero-cta">
+            <button class="btn-filled" onclick="switchTab('services')">Explore Services</button>
+            <button class="btn-ghost" onclick="switchTab('products')">Browse Plants</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section container">
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">👤</div>
+            <h3>Who We Are</h3>
+            <p>Bloomsy is a small gardening startup created to help people enjoy plants and greenery in their everyday spaces.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">🌾</div>
+            <h3>What We Do</h3>
+            <p>We provide gardening services, plants, and tools that help homes and small spaces become greener and more refreshing.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">💚</div>
+            <h3>Why We Do It</h3>
+            <p>Many people want plants but don't know how to care for them. Bloomsy makes gardening simple and enjoyable for beginners.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">📍</div>
+            <h3>Where We Operate</h3>
+            <p>Bloomsy operates locally and helps homes, balconies, and small gardens become vibrant green spaces.</p>
+          </div>
+        </div>
+
+        <div class="about-banner">
+          <div class="about-banner-text">
+            <h2>Small spaces.<br/>Big greenery.</h2>
+            <p>From a single windowsill plant to a full balcony garden — Bloomsy is here every step of the way. We bring you the right plants, the right tools, and the knowledge to make it all work.</p>
+            <button class="btn-filled" onclick="switchTab('contact')">Get in Touch</button>
+          </div>
+          <div class="about-banner-visual">
+            <div class="banner-plant-display">
+              <span>🪴</span>
+              <span>🌵</span>
+              <span>🌿</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES TAB ===================== -->
+    <section class="tab-panel" id="tab-services">
+      <div class="tab-hero services-hero">
+        <div class="container">
+          <span class="eyebrow">What We Offer</span>
+          <h2>Our Gardening Services</h2>
+          <p>From setup to ongoing care — we've got your garden covered.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+        <p class="click-hint-banner">💡 Click on any service card to view full details, benefits, and booking options.</p>
+        <div class="services-grid">
+          <div class="service-card clickable-card" onclick="openServiceModal('garden-setup')">
+            <div class="service-num">01</div>
+            <div class="service-icon">🏡</div>
+            <h3>Garden Setup</h3>
+            <p>We help design and set up small gardens for homes, balconies, and terraces. From layout planning to plant placement, we handle it all.</p>
+            <span class="card-cta-hint">View Details &amp; Book →</span>
+          </div>
+          <div class="service-card clickable-card" onclick="openServiceModal('plant-consultation')">
+            <div class="service-num">02</div>
+            <div class="service-icon">🌿</div>
+            <h3>Plant Consultation</h3>
+            <p>Not sure which plant suits your home? Get expert guidance for choosing the right plants for your home environment and lifestyle.</p>
+            <span class="card-cta-hint">View Details &amp; Book →</span>
+          </div>
+          <div class="service-card clickable-card" onclick="openServiceModal('plant-maintenance')">
+            <div class="service-num">03</div>
+            <div class="service-icon">🌱</div>
+            <h3>Plant Maintenance</h3>
+            <p>Regular care visits to keep your plants healthy and thriving. Basic watering, trimming, and health checks included.</p>
+            <span class="card-cta-hint">View Details &amp; Book →</span>
+          </div>
+          <div class="service-card featured-service clickable-card" onclick="openServiceModal('starter-kit')">
+            <div class="service-num">04</div>
+            <div class="service-icon">🎒</div>
+            <h3>Home Gardening Starter Kit</h3>
+            <p>Helping beginners start their own small garden with everything they need — plants, soil, tools, and step-by-step guidance.</p>
+            <span class="card-cta-hint">View Details &amp; Book →</span>
+          </div>
+        </div>
+        <div class="services-note">
+          <span>💬</span>
+          <p>Have a specific requirement? <button class="inline-link" onclick="switchTab('contact')">Contact us</button> and we'll build a custom plan just for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCTS TAB ===================== -->
+    <section class="tab-panel" id="tab-products">
+      <div class="tab-hero products-hero">
+        <div class="container">
+          <span class="eyebrow">Our Collection</span>
+          <h2>Plants &amp; Gardening Tools</h2>
+          <p>Hand-picked plants and quality tools for every home gardener.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+
+        <p class="click-hint-banner">💡 Click on any product card to view details, select quantity, and add to cart.</p>
+
+        <!-- PLANTS -->
+        <div class="category-header">
+          <h3>🌿 Plants</h3>
+          <div class="category-line"></div>
+        </div>
+        <div class="products-grid">
+
+          <div class="product-card clickable-card" onclick="openProductModal('aloe-vera')">
+            <div class="product-img-wrap">
+              <img src="images/aloe-vera.jpeg" alt="Aloe Vera" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌵 Aloe Vera</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Succulent</span>
+              <h4>Aloe Vera</h4>
+              <p>A hardy succulent known for its medicinal and skincare benefits. Requires very little water.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 199</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card clickable-card" onclick="openProductModal('bougainvillea')">
+            <div class="product-img-wrap">
+              <img src="images/bougainvillea.jpeg" alt="Bougainvillea" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌸 Bougainvillea</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Flowering</span>
+              <h4>Bougainvillea</h4>
+              <p>A vibrant flowering plant adding bright pink, purple, or orange colors to gardens and balconies.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 299</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card clickable-card" onclick="openProductModal('areca-palm')">
+            <div class="product-img-wrap">
+              <img src="images/areca-palm.jpeg" alt="Areca Palm" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌴 Areca Palm</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Indoor</span>
+              <h4>Areca Palm</h4>
+              <p>A beautiful indoor plant with feathery green leaves that brighten any room. Improves air quality.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 449</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card clickable-card" onclick="openProductModal('jasmine')">
+            <div class="product-img-wrap">
+              <img src="images/jasmine.jpeg" alt="Jasmine" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌼 Jasmine</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Fragrant</span>
+              <h4>Jasmine</h4>
+              <p>Loved for its sweet fragrance and delicate white flowers. Perfect for balconies and terraces.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 249</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card clickable-card" onclick="openProductModal('spider-plant')">
+            <div class="product-img-wrap">
+              <img src="images/spider-plant.jpeg" alt="Spider Plant" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌿 Spider Plant</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Low Maintenance</span>
+              <h4>Spider Plant</h4>
+              <p>A low-maintenance indoor plant with long arching leaves. Adapts easily to different conditions.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 179</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card clickable-card" onclick="openProductModal('snake-plant')">
+            <div class="product-img-wrap">
+              <img src="images/snake-plant.jpeg" alt="Snake Plant" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🪴 Snake Plant</div>
+            </div>
+            <div class="product-info">
+              <span class="product-tag">Air Purifying</span>
+              <h4>Snake Plant</h4>
+              <p>One of the easiest plants to grow. Enhances décor and purifies the air indoors.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 219</span>
+                <span class="view-btn-hint">View Details →</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TOOLS -->
+        <div class="category-header" style="margin-top: 60px;">
+          <h3>🧰 Gardening Tools</h3>
+          <div class="category-line"></div>
+        </div>
+        <div class="tools-grid">
+
+          <div class="tool-card clickable-card" onclick="openProductModal('hand-trowel')">
+            <div class="tool-img-wrap">
+              <img src="images/hand-trowel.jpeg" alt="Hand Trowel" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🪛 Hand Trowel</div>
+            </div>
+            <div class="tool-card-body">
+              <h4>Hand Trowel</h4>
+              <p>A small hand tool perfect for digging soil and planting small plants.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 149</span>
+                <span class="view-btn-hint">View →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-card clickable-card" onclick="openProductModal('pruning-shears')">
+            <div class="tool-img-wrap">
+              <img src="images/pruning-shears.jpeg" alt="Pruning Shears" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">✂️ Pruning Shears</div>
+            </div>
+            <div class="tool-card-body">
+              <h4>Pruning Shears</h4>
+              <p>Useful for trimming branches and keeping plants healthy year-round.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 199</span>
+                <span class="view-btn-hint">View →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-card clickable-card" onclick="openProductModal('watering-can')">
+            <div class="tool-img-wrap">
+              <img src="images/watering-can.jpeg" alt="Watering Can" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🪣 Watering Can</div>
+            </div>
+            <div class="tool-card-body">
+              <h4>Watering Can</h4>
+              <p>A practical tool to water plants gently without damaging delicate leaves.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 129</span>
+                <span class="view-btn-hint">View →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-card clickable-card" onclick="openProductModal('gardening-gloves')">
+            <div class="tool-img-wrap">
+              <img src="images/gardening-gloves.jpeg" alt="Gardening Gloves" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🧤 Gardening Gloves</div>
+            </div>
+            <div class="tool-card-body">
+              <h4>Gardening Gloves</h4>
+              <p>Protects hands while planting, digging, and maintaining plants.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 99</span>
+                <span class="view-btn-hint">View →</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-card clickable-card" onclick="openProductModal('organic-manure-soil')">
+            <div class="tool-img-wrap">
+              <img src="images/organic-manure-soil.jpeg" alt="Organic Manure Soil" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+              <div class="img-placeholder-text">🌍 Organic Manure Soil</div>
+            </div>
+            <div class="tool-card-body">
+              <h4>Organic Manure Soil</h4>
+              <p>Natural nutrient-rich soil that improves plant growth without chemicals.</p>
+              <div class="product-card-footer">
+                <span class="product-price">₹ 179</span>
+                <span class="view-btn-hint">View →</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IMPACT TAB ===================== -->
+    <section class="tab-panel" id="tab-impact">
+      <div class="tab-hero impact-hero">
+        <div class="container">
+          <span class="eyebrow">Why It Matters</span>
+          <h2>Our Green Impact</h2>
+          <p>Every plant we help grow contributes to a healthier planet and community.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+        <div class="impact-lead">
+          <p>Bloomsy encourages people to grow plants and reconnect with nature. Plants improve air quality, beautify living spaces, and create a healthier environment. By promoting home gardening, Bloomsy helps individuals build greener homes and support a more sustainable lifestyle.</p>
+        </div>
+
+        <div class="impact-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🏡</div>
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Homes Greened</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌱</div>
+            <div class="stat-num">2,000+</div>
+            <div class="stat-label">Plants Planted</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌍</div>
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Neighbourhoods</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">😊</div>
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+        </div>
+
+        <div class="impact-cards">
+          <div class="impact-card">
+            <div class="impact-card-icon">💨</div>
+            <div>
+              <h3>Cleaner Air</h3>
+              <p>Indoor plants are natural air purifiers. Common plants like Snake Plants and Areca Palms remove harmful toxins and release fresh oxygen, making your home healthier to breathe in.</p>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-icon">🧘</div>
+            <div>
+              <h3>Mental Wellbeing</h3>
+              <p>Studies show that spending time around plants reduces stress and anxiety. A small green corner at home can make a meaningful difference to your daily mood and focus.</p>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-icon">♻️</div>
+            <div>
+              <h3>Sustainable Choices</h3>
+              <p>We use and recommend organic soil and eco-friendly gardening practices. Bloomsy is committed to making gardening gentle on the environment, not just your home.</p>
+            </div>
+          </div>
+          <div class="impact-card">
+            <div class="impact-card-icon">🤝</div>
+            <div>
+              <h3>Community Growth</h3>
+              <p>By connecting plant lovers locally, Bloomsy builds a community that shares knowledge, swaps cuttings, and grows together — one green space at a time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== COMMUNITY & BLOG TAB ===================== -->
+    <section class="tab-panel" id="tab-community">
+      <div class="tab-hero community-hero">
+        <div class="container">
+          <span class="eyebrow">Learn &amp; Connect</span>
+          <h2>Community &amp; Blog</h2>
+          <p>Stories, tips, and conversations from our growing community of plant lovers.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+        <div class="community-layout">
+          <div class="blog-section">
+            <h3 class="sub-heading">📰 Latest from the Blog</h3>
+            <div class="blog-cards">
+              <div class="blog-card">
+                <div class="blog-card-img">🌿</div>
+                <div class="blog-card-body">
+                  <span class="blog-tag">Wellness</span>
+                  <h4>Benefits of Indoor Plants</h4>
+                  <p>Indoor plants don't just look beautiful — they clean the air, reduce stress, and can even boost your productivity. Here's why every home needs at least one...</p>
+                  <button class="btn-link">Read Article →</button>
+                </div>
+              </div>
+              <div class="blog-card">
+                <div class="blog-card-img">🌱</div>
+                <div class="blog-card-body">
+                  <span class="blog-tag">Beginner</span>
+                  <h4>Easy Plants for Beginners</h4>
+                  <p>Starting your plant journey? These 5 hardy, low-maintenance plants are perfect for first-timers. No green thumb required — just a little love...</p>
+                  <button class="btn-link">Read Article →</button>
+                </div>
+              </div>
+              <div class="blog-card">
+                <div class="blog-card-img">🏢</div>
+                <div class="blog-card-body">
+                  <span class="blog-tag">DIY</span>
+                  <h4>How to Care for Balcony Plants</h4>
+                  <p>A balcony garden is a beautiful thing — but it takes a little know-how. Light, wind, and watering are your key variables. Here's how to get it right...</p>
+                  <button class="btn-link">Read Article →</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="community-feed-section">
+            <h3 class="sub-heading">🌐 Community Feed</h3>
+            <div class="community-feed">
+              <div class="community-post">
+                <div class="post-header">
+                  <div class="post-avatar">👩</div>
+                  <div class="post-meta">
+                    <strong>Priya K.</strong>
+                    <span>2 hours ago</span>
+                  </div>
+                </div>
+                <p class="post-text">I just planted my first Aloe Vera today! 🌵 So excited to see it grow. Bloomsy made the process so easy!</p>
+                <div class="post-actions">
+                  <button class="post-btn" data-type="like">❤️ <span class="count">12</span></button>
+                  <button class="post-btn" data-type="comment">💬 <span class="count">4</span></button>
+                  <button class="post-btn" data-type="share">🔁 <span class="count">2</span></button>
+                </div>
+              </div>
+              <div class="community-post">
+                <div class="post-header">
+                  <div class="post-avatar">👨</div>
+                  <div class="post-meta">
+                    <strong>Rahul M.</strong>
+                    <span>Yesterday</span>
+                  </div>
+                </div>
+                <p class="post-text">My Spider Plant is growing really fast! 🌿 Three new babies in just two weeks. Time to share some cuttings!</p>
+                <div class="post-actions">
+                  <button class="post-btn" data-type="like">❤️ <span class="count">28</span></button>
+                  <button class="post-btn" data-type="comment">💬 <span class="count">7</span></button>
+                  <button class="post-btn" data-type="share">🔁 <span class="count">5</span></button>
+                </div>
+              </div>
+              <div class="community-post">
+                <div class="post-header">
+                  <div class="post-avatar">🧑</div>
+                  <div class="post-meta">
+                    <strong>Ananya S.</strong>
+                    <span>2 days ago</span>
+                  </div>
+                </div>
+                <p class="post-text">My balcony garden is finally taking shape! 🌸 Started with just 2 plants from Bloomsy — now I have 8!</p>
+                <div class="post-actions">
+                  <button class="post-btn" data-type="like">❤️ <span class="count">41</span></button>
+                  <button class="post-btn" data-type="comment">💬 <span class="count">11</span></button>
+                  <button class="post-btn" data-type="share">🔁 <span class="count">8</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEEDBACK TAB ===================== -->
+    <section class="tab-panel" id="tab-feedback">
+      <div class="tab-hero feedback-hero">
+        <div class="container">
+          <span class="eyebrow">Our Customers</span>
+          <h2>Customer Feedback</h2>
+          <p>Real stories from people who've brought Bloomsy into their homes.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Bloomsy helped me start my first balcony garden. The plants were easy to maintain and the team was so helpful throughout the whole process!</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">🌸</div>
+              <div>
+                <strong>Sunita R.</strong>
+                <span>Balcony Garden Customer</span>
+              </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card featured-testimonial">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">I bought a Snake Plant and it has completely changed the look of my room. It's thriving with almost zero effort — and the air feels fresher too!</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">🪴</div>
+              <div>
+                <strong>Arjun V.</strong>
+                <span>Plant Customer</span>
+              </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">The gardening tools are simple and very useful for beginners. The hand trowel and gloves from Bloomsy are now my weekend essentials!</p>
+            <div class="testimonial-footer">
+              <div class="testimonial-avatar">🌿</div>
+              <div>
+                <strong>Meera T.</strong>
+                <span>Tools Customer</span>
+              </div>
+            </div>
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+
+        <div class="rating-summary">
+          <div class="rating-big">4.9 ⭐</div>
+          <p>Average rating from our customers</p>
+          <div class="rating-bars">
+            <div class="rating-bar-row"><span>5 ★</span><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div><span>85%</span></div>
+            <div class="rating-bar-row"><span>4 ★</span><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div><span>10%</span></div>
+            <div class="rating-bar-row"><span>3 ★</span><div class="bar-track"><div class="bar-fill" style="width:5%"></div></div><span>5%</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT TAB ===================== -->
+    <section class="tab-panel" id="tab-contact">
+      <div class="tab-hero contact-hero">
+        <div class="container">
+          <span class="eyebrow">Say Hello</span>
+          <h2>Contact Bloomsy</h2>
+          <p>We'd love to hear from you. Drop us a message anytime.</p>
+        </div>
+      </div>
+      <div class="container tab-body">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>Have questions about our services or products? Want to start your garden journey? We're just a message away.</p>
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="/cdn-cgi/l/email-protection#d3bbb6bfbfbc93b1bfbcbcbea0aafdb0bcbe"><span class="__cf_email__" data-cfemail="fe969b929291be9c929191938d87d09d9193">[email&#160;protected]</span></a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">📞</div>
+                <div>
+                  <strong>Phone</strong>
+                  <span>+91 90000 00000</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon">📍</div>
+                <div>
+                  <strong>Location</strong>
+                  <span>India</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-social">
+              <a href="#" class="social-pill">📸 Instagram</a>
+              <a href="#" class="social-pill">📘 Facebook</a>
+              <a href="#" class="social-pill">🐦 Twitter</a>
+            </div>
+          </div>
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <div class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" placeholder="e.g. Priya Sharma"/>
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" placeholder="hello@email.com"/>
+              </div>
+              <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" rows="5" placeholder="Tell us about your garden goals..."></textarea>
+              </div>
+              <button class="btn-filled full-width" id="sendBtn">Send Message 🌿</button>
+              <div class="form-success" id="formSuccess">
+                <span>✅</span> Thank you! We'll get back to you soon.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <span class="logo-icon">🌿</span>
+        <span>Bloomsy</span>
+      </div>
+      <p class="footer-tagline">Bringing Nature Closer to You</p>
+      <div class="footer-tabs">
+        <button onclick="switchTab('about')">About Us</button>
+        <button onclick="switchTab('services')">Services</button>
+        <button onclick="switchTab('products')">Products</button>
+        <button onclick="switchTab('contact')">Contact</button>
+      </div>
+      <p class="footer-copy">© 2026 Bloomsy. Made with 💚 for plant lovers.</p>
+    </div>
+  </footer>
+
+  <!-- ================================================================
+       PRODUCT DETAILS MODAL
+  ================================================================ -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="modal-box product-modal-box">
+      <button class="modal-close-btn" id="productModalClose" aria-label="Close">✕</button>
+      <div class="product-modal-inner">
+        <div class="pm-image-col">
+          <div class="pm-img-wrap" id="pmImgWrap">
+            <img id="pmImg" src="" alt="" onerror="this.parentElement.classList.add('img-fallback'); this.style.opacity='0'"/>
+            <div class="img-placeholder-text" id="pmImgPlaceholder"></div>
+          </div>
+          <span class="pm-category-badge" id="pmCategory"></span>
+        </div>
+        <div class="pm-info-col">
+          <h2 id="pmName"></h2>
+          <p class="pm-desc" id="pmDesc"></p>
+          <div class="pm-price-tag" id="pmPrice"></div>
+          <div class="pm-qty-row">
+            <label>Quantity</label>
+            <div class="qty-control">
+              <button class="qty-btn" id="pmQtyMinus">−</button>
+              <span class="qty-val" id="pmQtyVal">1</span>
+              <button class="qty-btn" id="pmQtyPlus">+</button>
+            </div>
+          </div>
+          <div class="pm-action-row">
+            <button class="btn-filled" id="pmAddToCart">Add to Cart 🛒</button>
+            <button class="btn-outline-green" id="pmBuyNow">Buy Now →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       SERVICE DETAILS MODAL
+  ================================================================ -->
+  <div class="modal-overlay" id="serviceModalOverlay">
+    <div class="modal-box service-modal-box">
+      <button class="modal-close-btn" id="serviceModalClose" aria-label="Close">✕</button>
+      <div class="service-modal-inner">
+        <div class="sm-header">
+          <span class="sm-icon" id="smIcon"></span>
+          <div>
+            <span class="sm-badge">Bloomsy Service</span>
+            <h2 id="smName"></h2>
+          </div>
+        </div>
+        <p class="sm-desc" id="smDesc"></p>
+        <div class="sm-benefits-section">
+          <h4>✨ Key Benefits</h4>
+          <ul class="sm-benefits" id="smBenefits"></ul>
+        </div>
+        <div class="sm-price-row">
+          <span class="sm-price" id="smPrice"></span>
+        </div>
+        <div class="sm-action-row">
+          <button class="btn-filled" id="smBookService">Book This Service 📅</button>
+          <button class="btn-outline-green" id="smAddToCart">Add to Cart 🛒</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       CART DRAWER
+  ================================================================ -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3>Your Cart 🛒</h3>
+      <button class="cart-drawer-close" id="cartDrawerClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList">
+      <div class="cart-empty-msg">
+        <span>🌱</span>
+        <p>Your cart is empty</p>
+        <small>Browse our products and services to get started!</small>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total-row">
+        <span>Total Items</span>
+        <strong id="cartTotalItems">0</strong>
+      </div>
+      <div class="cart-total-row cart-price-row">
+        <span>Total Price</span>
+        <strong id="cartTotalPrice">₹ 0</strong>
+      </div>
+      <button class="btn-filled full-width" id="checkoutBtn">Proceed to Checkout →</button>
+    </div>
+  </div>
+
+  <!-- ================================================================
+       CHECKOUT MODAL
+  ================================================================ -->
+  <div class="modal-overlay" id="checkoutModalOverlay">
+    <div class="modal-box checkout-modal-box">
+      <button class="modal-close-btn" id="checkoutModalClose" aria-label="Close">✕</button>
+
+      <!-- Checkout Form -->
+      <div id="checkoutFormSection">
+        <h2 class="checkout-title">Complete Your Order 🌿</h2>
+
+        <div class="checkout-summary-box" id="checkoutOrderSummary"></div>
+
+        <div class="checkout-form-grid">
+          <div class="form-group">
+            <label for="ck-name">Full Name *</label>
+            <input type="text" id="ck-name" placeholder="Your full name"/>
+          </div>
+          <div class="form-group">
+            <label for="ck-phone">Phone Number *</label>
+            <input type="tel" id="ck-phone" placeholder="+91 00000 00000"/>
+          </div>
+          <div class="form-group">
+            <label for="ck-email">Email *</label>
+            <input type="email" id="ck-email" placeholder="hello@email.com"/>
+          </div>
+          <div class="form-group ck-full-row">
+            <label for="ck-address">Address *</label>
+            <input type="text" id="ck-address" placeholder="House No, Street, Area"/>
+          </div>
+          <div class="form-group">
+            <label for="ck-city">City *</label>
+            <input type="text" id="ck-city" placeholder="City"/>
+          </div>
+          <div class="form-group">
+            <label for="ck-pin">Pincode *</label>
+            <input type="text" id="ck-pin" placeholder="000000"/>
+          </div>
+        </div>
+
+        <div class="payment-section">
+          <h4>Payment Method</h4>
+          <div class="payment-options">
+            <label class="payment-option">
+              <input type="radio" name="payment" value="upi" checked/>
+              <span class="payment-label">📱 UPI</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="card"/>
+              <span class="payment-label">💳 Credit / Debit Card</span>
+            </label>
+            <label class="payment-option">
+              <input type="radio" name="payment" value="cod"/>
+              <span class="payment-label">💵 Cash on Delivery</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-error" id="checkoutError" style="display:none">⚠️ Please fill in all required fields.</div>
+        <button class="btn-filled full-width place-order-btn" id="placeOrderBtn">Place Order 🌿</button>
+      </div>
+
+      <!-- Order Success -->
+      <div id="orderSuccessSection" style="display:none">
+        <div class="order-success">
+          <div class="success-icon-wrap">✅</div>
+          <h2>Order Placed Successfully!</h2>
+          <p>Your order has been placed successfully. Thank you for choosing Bloomsy 🌿</p>
+          <p class="success-sub">We'll send a confirmation to your email shortly.</p>
+          <button class="btn-filled" id="continueShopping">Continue Shopping 🌱</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
