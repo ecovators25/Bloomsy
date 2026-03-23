@@ -141,7 +141,7 @@ const SERVICES = {
     name: 'Plant Maintenance',
     emoji: '🌱',
     price: 800,
-    priceLabel: '₹ 800 per visit',
+    priceLabel: 'Contact for details',
     desc: 'Keep your plants healthy and thriving with our regular care visit service. Our trained team visits your home or office on a scheduled basis to water, trim, fertilise, and check the health of your plants. We identify early signs of pests, disease, or nutrient deficiency so your garden always looks its best.',
     benefits: [
       'Regular watering, pruning, and fertilising on schedule',
