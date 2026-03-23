@@ -140,15 +140,16 @@ const SERVICES = {
   'plant-maintenance': {
     name: 'Plant Maintenance',
     emoji: '🌱',
-    price: 800,
+    price: 500,
     priceLabel: 'Contact for details',
     desc: 'Keep your plants healthy and thriving with our regular care visit service. Our trained team visits your home or office on a scheduled basis to water, trim, fertilise, and check the health of your plants. We identify early signs of pests, disease, or nutrient deficiency so your garden always looks its best.',
     benefits: [
       'Regular watering, pruning, and fertilising on schedule',
       'Early detection and treatment of pests and plant disease',
       'Repotting and soil refresh when needed',
-      'Customised care plan based on your plant collection',
-      'Health report shared after each maintenance visit',
+      'Subscriptions starting from Rs. 3,000 per month',
+      'First Consultation Rs. 500 to assess garden size and care requirements',
+      'Weekly visits from our maintenance crew'
     ],
   },
   'starter-kit': {
