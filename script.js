@@ -149,7 +149,7 @@ const SERVICES = {
       'Repotting and soil refresh when needed',
       'Subscriptions starting from Rs. 3,000 per month',
       'First Consultation Rs. 500 to assess garden size and care requirements',
-      'Weekly visits from our maintenance crew'
+      'Weekly visits from our maintenance crew',
     ],
   },
   'starter-kit': {
